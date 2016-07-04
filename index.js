@@ -7,6 +7,10 @@ const bodyParser = require('body-parser');
 const restService = express();
 restService.use(bodyParser.json());
 
+app.get('/', function(request, response) {
+ 	response.send('Hello World!');
+});
+
 restService.post('/hook', function (req, res) {
 
     console.log('hook request');
